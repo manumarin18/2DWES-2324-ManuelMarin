@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //Obtenemos los valores de los operandos y la operación seleccionada
     $operando1 = $_POST['operando1'];
     $operando2 = $_POST['operando2'];
-    
+	
 	//Comprobamos que la variable no es NULL con isset()
-	if (isset($_POST['operacion'])) {
+    if (isset($_POST['operacion'])) {
         $operacion = $_POST['operacion'];
 
         //Verificamos que los campos no estén vacíos  con empty()
@@ -33,8 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $resultado = "Error: División entre cero.";
                 }
             }
-            //Mostramos el resultado
-            echo "Resultado operación: " . $resultado;
+            //Mostramos el resultado detallado
+            echo "Resultado: " . $operando1 . " " . getOperacionSimbolo($operacion) . " " . $operando2 . " = " . $resultado;
         } else {
             //Mostramos mensaje de error si algún campo está vacío
             echo "Por favor, completa todos los campos.";
@@ -42,6 +42,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         //Mostramos mensaje de error si no se selecciona ninguna operación
         echo "Por favor, selecciona una operación.";
+    }
+}
+	
+	//Función para obtener el símbolo de la operación seleccionada
+function getOperacionSimbolo($operacion) {
+    switch ($operacion) {
+        case 'suma':
+            return "+";
+        case 'resta':
+            return "-";
+        case 'multi':
+            return "x";
+        case 'divi':
+            return "/";
+        default:
+            return "";
     }
 }
 ?>
