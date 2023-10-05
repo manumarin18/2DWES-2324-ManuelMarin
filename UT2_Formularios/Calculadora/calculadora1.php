@@ -11,12 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //Obtenemos los valores de los operandos y la operación seleccionada
     $operando1 = $_POST['operando1'];
     $operando2 = $_POST['operando2'];
-    if (isset($_POST['operacion'])) {
+    
+	//Comprobamos que la variable no es NULL con isset()
+	if (isset($_POST['operacion'])) {
         $operacion = $_POST['operacion'];
 
-        //Verificamos que los campos no estén vacíos
+        //Verificamos que los campos no estén vacíos  con empty()
         if (!empty($operando1) && !empty($operando2) && !empty($operacion)) {
-            //Realizamos la operación correspondiente según la opción seleccionada
+            //Realizamos la operación correspondiente
             if ($operacion == 'suma') {
                 $resultado = $operando1 + $operando2;
             } elseif ($operacion == 'resta') {
