@@ -37,11 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Resultado: " . $operando1 . " " . getOperacionSimbolo($operacion) . " " . $operando2 . " = " . $resultado;
         } else {
             //Mostramos mensaje de error si algún campo está vacío
-            echo "Por favor, completa todos los campos.";
+            echo "Error: inserte los datos.";
         }
     } else {
         //Mostramos mensaje de error si no se selecciona ninguna operación
-        echo "Por favor, selecciona una operación.";
+        echo "Error: seleccione operación.";
     }
 }
 	
