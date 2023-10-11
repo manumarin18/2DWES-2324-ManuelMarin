@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>CALCULADORA</h1>
-    <form name='mi_formulario' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method='POST'>
+    <form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method='POST'>
         Operando1:
         <input type='text' name='operando1' value='' size=15><br><br>
         Operando2:
@@ -89,4 +89,3 @@
     ?>
 </body>
 </html>
-
