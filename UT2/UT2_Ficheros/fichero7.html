@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Operaciones Sistemas Ficheros</title>
+</head>
+<body>
+<h1>Operaciones Sistemas Ficheros</h1>
+<form action="fichero7.php" method="post" >
+<div>
+<label for="Caja1">Fichero Origen(Path/nombre)</label>
+<input type="text" name="caja1" /> <br />
+<label for="Caja2">Fichero Destino(Path/nombre)</label>
+<input type="text" name="caja2" /> <br />
+</div>
+<div>
+<br>
+<label for="fichero">Operaciones<br></label>
+<input type="radio" value="CopiarFichero" name="fichero" /> Copiar Fichero </br>
+<input type="radio" value="RenombrarFichero" name="fichero" /> Renombrar Fichero </br>
+<input type="radio" value="BorrarFichero" name="fichero"/> Borrar Fichero </br>
+</div>
+<br />
+<input type="submit" value="Ejecutar Operacion" />
+<input type="reset" value="Borrar" />
+</form>
+</body>
+</html>
