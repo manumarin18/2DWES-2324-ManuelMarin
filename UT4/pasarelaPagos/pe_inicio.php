@@ -26,8 +26,8 @@
        
         <h3>Gestion general:</h3>
         <ul>
-            <li><a href="pe_altaped.php"> Generar pedido </a></li>
-            <li><a href="pe_consped.php">Consulta detalles pedido por número de cliente </a></li>
+            <li><a href="pe_altaped.php">Generar pedido </a></li>
+            <li><a href="pe_consped.php">Consultar pedidos por número de cliente </a></li>
             <li><a href="pe_consprodstock.php">Consultar disponibilidad de stock </a></li>
             <li><a href="pe_constock.php">Consultar disponibilidad de stock familia </a></li>
             <li><a href="pe_topprod.php">Productos vendidos entre dos fechas</a></li>
